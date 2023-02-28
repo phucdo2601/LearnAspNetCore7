@@ -16,6 +16,8 @@ namespace LearnNet7AuthenAndAuthorB01.Models
         public DbSet<Category> Categories { get; set; }
         public DbSet<Item> Items { get; set; }
 
+        public DbSet<RefreshToken> RefreshTokens { get; set; }
+
         #endregion
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -26,6 +28,7 @@ namespace LearnNet7AuthenAndAuthorB01.Models
             modelBuilder.ApplyConfiguration(new AccountConfiguration());
             modelBuilder.ApplyConfiguration(new ItemConfiguration());
             modelBuilder.ApplyConfiguration(new CategoryConfiguration());
+            modelBuilder.ApplyConfiguration(new RefreshTokenConfiguration());
         }
     }
 }

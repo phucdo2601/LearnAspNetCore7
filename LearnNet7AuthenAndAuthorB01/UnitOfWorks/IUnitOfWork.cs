@@ -1,6 +1,7 @@
 ﻿using LearnNet7AuthenAndAuthorB01.Repositories.AccountRepo;
 using LearnNet7AuthenAndAuthorB01.Repositories.CategoryRepo;
 using LearnNet7AuthenAndAuthorB01.Repositories.ItemRepo;
+using LearnNet7AuthenAndAuthorB01.Repositories.RefreshTokenRepo;
 using LearnNet7AuthenAndAuthorB01.Repositories.RoleRepo;
 
 namespace LearnNet7AuthenAndAuthorB01.UnitOfWorks
@@ -14,6 +15,8 @@ namespace LearnNet7AuthenAndAuthorB01.UnitOfWorks
         IRoleRepository RoleRepository { get; }
         ICategoryRepository CategoryRepository { get; }
         IItemRepository ItemRepository { get; }
+
+        IRefreshTokenRepository RefreshTokenRepository { get; }
 
     }
 }

@@ -17,6 +17,7 @@ namespace LearnNet7AuthenAndAuthorB01.Controllers
         }
 
         [HttpGet("getAllItems")]
+        [Authorize]
         public async Task<IActionResult> GetAllItems() {
             var res = _unitOfWork.ItemRepository.GetAll();
 
@@ -24,7 +25,7 @@ namespace LearnNet7AuthenAndAuthorB01.Controllers
         }
 
         [HttpGet("filterItemByName/{searchString}/{sortBy}")]
-        [Authorize]
+        
         public async Task<IActionResult> FilterItemByName([FromRoute(Name = "searchString")] string search, 
             [FromQuery(Name = "PriceBegin")] double? PriceBegin, 
             [FromQuery(Name = "PriceEnd")] double? PriceEnd,

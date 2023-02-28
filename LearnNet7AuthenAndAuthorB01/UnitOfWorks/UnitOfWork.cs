@@ -2,6 +2,7 @@
 using LearnNet7AuthenAndAuthorB01.Repositories.AccountRepo;
 using LearnNet7AuthenAndAuthorB01.Repositories.CategoryRepo;
 using LearnNet7AuthenAndAuthorB01.Repositories.ItemRepo;
+using LearnNet7AuthenAndAuthorB01.Repositories.RefreshTokenRepo;
 using LearnNet7AuthenAndAuthorB01.Repositories.RoleRepo;
 
 namespace LearnNet7AuthenAndAuthorB01.UnitOfWorks
@@ -22,6 +23,8 @@ namespace LearnNet7AuthenAndAuthorB01.UnitOfWorks
         public ICategoryRepository CategoryRepository => new CategoryRepository(_context);
 
         public IItemRepository ItemRepository => new ItemRepository(_context);
+
+        public IRefreshTokenRepository RefreshTokenRepository => new RefreshTokenRepository(_context);
 
         public void Dispose()
         {
